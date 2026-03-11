@@ -1,0 +1,70 @@
+\section{Introduction}\label{sec:intro}
+
+Iterative proof refinement---whether carried out by a human mathematician,
+a formal verification system, or a large language model---proceeds by
+composing a sequence of transformations on a proof state.  Each
+transformation may introduce a small error, and understanding how these
+errors accumulate is essential for predicting whether a multi-step reasoning
+process will converge.  Despite the practical importance of this question
+in automated theorem proving \cite{gottesman1996}, no mathematical framework
+currently characterizes the relationship between the algebraic structure of
+error composition and the resulting convergence rate.
+
+The study of error propagation on algebraic structures has a rich history
+outside of proof theory.  In robotics and navigation, Barrau and Bonnabel
+\cite{barrau2014} showed that systems evolving on matrix Lie groups
+satisfying the \emph{group affine property} enjoy a remarkable
+\emph{log-linear} error dynamics: the Lie logarithm of the nonlinear error
+satisfies a linear differential equation, valid for arbitrarily large
+errors.  Wang and Chirikjian \cite{wang2008} developed second-order error
+propagation formulas on non-abelian Lie groups, revealing that
+non-commutativity introduces coupling between mean and covariance evolution
+that is absent on abelian groups.  Li et al.\ \cite{li2023} extended this
+framework to stochastic affine group systems with external disturbances.
+
+In quantum information theory, Gottesman \cite{gottesman1996} proved that
+the stabilizer group of any quantum error-correcting code must be abelian,
+providing a concrete example where abelian subgroup structure is necessary
+for systematic error control.  Arvind et al.\ \cite{arvind2002} constructed
+error-correcting codes from abelian subgroups of the non-abelian error
+group, and Zhao and Miyake \cite{zhao2023} used group symmetries for error
+mitigation.  These results suggest a general principle: abelian structure
+enables better error management.
+
+On the probabilistic side, the theory of random walks on groups, developed
+extensively by Diaconis and collaborators \cite{diaconis1988}, connects the
+spectral gap of a transition operator to mixing times via the group's
+representation theory.  For abelian groups, all irreducible representations
+are one-dimensional, yielding a complete eigenvalue decomposition.
+
+In this paper, we bring these threads together by modeling proof state
+transformations as elements of $\GL_d(\R)$ and analyzing error accumulation
+through the lens of Lyapunov exponents and spectral gaps.  Our main
+contributions are as follows.
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt,topsep=4pt]
+\item We prove a \emph{Lyapunov exponent ordering theorem}
+  (Theorem~\ref{thm:lyapunov}): abelian (simultaneously diagonalizable)
+  error operators have strictly lower Lyapunov exponents than non-abelian
+  ones, with the gap quantified by the expected squared commutator norm
+  at order $\Theta(\eps^2)$.
+
+\item We establish a \emph{spectral gap comparison}
+  (Theorem~\ref{thm:spectral_gap}) for lazy random walks on finite
+  groups, showing that the dihedral group $D_n$ has spectral gap
+  asymptotically four times that of the cyclic group $\Z_{2n}$.
+
+\item We prove that the \emph{Diaconis upper bound} is tighter for abelian
+  groups by a factor equal to the maximal irreducible representation
+  dimension (Theorem~\ref{thm:diaconis}).
+
+\item We apply these results to iterative proof refinement
+  (Theorem~\ref{thm:convergence}), identifying distinct robustness
+  thresholds for abelian and non-abelian error structures.
+\end{enumerate}
+
+The paper is organized as follows.  Section~\ref{sec:prelim} introduces
+notation and background results.  Section~\ref{sec:results} contains the
+statements and proofs of all main results.  Section~\ref{sec:discussion}
+discusses implications, connections to prior work, and open problems.
+Section~\ref{sec:conclusion} summarizes our contributions.

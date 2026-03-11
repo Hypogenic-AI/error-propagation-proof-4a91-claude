@@ -1,0 +1,146 @@
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Two regimes of commutativity}
+
+Our results reveal a fundamental dichotomy in the role of commutativity
+for multi-step proof systems.
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Error accumulation.}
+  Commuting (abelian) error operators yield lower Lyapunov exponents
+  (Theorem~\ref{thm:lyapunov}).  This means that when each proof step
+  introduces a small perturbation, independent substeps whose errors
+  commute produce slower error growth.
+
+\item \textbf{Proof space exploration.}
+  Non-abelian groups can have larger spectral gaps
+  (Theorem~\ref{thm:spectral_gap}), corresponding to faster mixing of
+  the associated random walk.  For proof search, this means that
+  non-commuting operations can explore the space of candidate proofs
+  more efficiently.
+\end{enumerate}
+
+These two objectives---minimizing error accumulation and maximizing
+exploration---are fundamentally in tension.  A proof strategy must
+balance them: use commuting substeps where errors compound (e.g., in
+algebraic simplification chains) and non-commuting operations where
+diversity of exploration is needed (e.g., case analysis or induction
+strategy selection).
+
+\subsection{Connections to prior work}
+
+\paragraph{Lie group error propagation.}
+Theorem~\ref{thm:lyapunov} extends the log-linear error framework
+of Barrau and Bonnabel \cite{barrau2014} from continuous-time Lie
+group systems to discrete stochastic matrix products.  While
+\cite{barrau2014} showed that group-affine systems enjoy linear error
+dynamics on the Lie algebra, our result quantifies the Lyapunov
+exponent for the discrete setting and shows that the abelian/non-abelian
+distinction has concrete consequences for convergence rates.
+
+\paragraph{Quantum error correction.}
+The requirement in Gottesman's stabilizer formalism \cite{gottesman1996}
+that the stabilizer group be abelian parallels our finding that abelian
+error structure yields tighter convergence bounds
+(Theorem~\ref{thm:diaconis}).  In both settings, commutativity provides
+the algebraic structure needed for systematic error control.
+Arvind et al.\ \cite{arvind2002} further showed that abelian subgroups
+of the non-abelian error group suffice for constructing error-correcting
+codes, analogous to our observation that it is the commutativity of the
+error directions (not the full proof transformations) that matters.
+
+\paragraph{Random walks on groups.}
+Our Theorem~\ref{thm:spectral_gap} applies the spectral gap framework
+of Diaconis \cite{diaconis1988} to the proof search setting.  The
+$4{:}1$ asymptotic ratio between the spectral gaps of $D_n$ and
+$\Z_{2n}$ illustrates how non-abelian Cayley graphs serve as better
+expanders, a phenomenon well-known in the theory of expander graphs
+but not previously connected to proof-theoretic convergence.
+
+\paragraph{Error propagation on motion groups.}
+Wang and Chirikjian \cite{wang2008} showed that error distributions
+on non-abelian Lie groups exhibit coupling between mean and covariance
+evolution.  Our commutator-based gap estimate
+(Theorem~\ref{thm:lyapunov}\ref{item:gap}) quantifies this coupling
+for discrete products and identifies the expected commutator Frobenius
+norm as the precise invariant controlling the penalty.
+
+\subsection{Implications for proof systems}
+
+Our results suggest three design principles for iterative proof
+refinement systems.
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Decompose into commuting substeps.}
+  When a proof can be decomposed into independent subgoals whose error
+  operators commute, error accumulation is minimized
+  (Theorem~\ref{thm:lyapunov}\ref{item:diag}).  This favors proof
+  strategies based on independent lemmas over tightly coupled reasoning
+  chains.
+
+\item \textbf{Use non-commuting operations for search.}
+  When the proof strategy involves exploring a space of candidate proofs,
+  non-commuting operations (case splits, induction choices) create
+  better-connected search graphs (Theorem~\ref{thm:spectral_gap}),
+  enabling faster convergence to a correct proof.
+
+\item \textbf{Monitor the commutator norm.}
+  The quantity $\E[\frobnorm{\comm{A_1}{A_2}}^2]$ is a computable
+  invariant that predicts the convergence penalty from proof step
+  interactions (Corollary~\ref{cor:commutator}).  Proof systems could
+  estimate this quantity online and adjust their strategy accordingly.
+\end{enumerate}
+
+\subsection{Open questions}
+
+We conclude with several directions for future work.
+
+\begin{conjecture}\label{conj:constant}
+The dimension-dependent constant $C_d$ in
+Theorem~\ref{thm:lyapunov}\ref{item:gap} satisfies
+$C_d = \Theta(1)$ as $d \to \infty$, i.e., the Lyapunov gap is
+dimension-independent at leading order.  Computational evidence
+(Table~\ref{tab:dimension}) supports this.
+\end{conjecture}
+
+\begin{table}[ht]
+\centering
+\caption{Lyapunov exponent gap $\lambda_{\mathrm{gen}} - \lambda_{\mathrm{abel}}$
+  as a function of dimension $d$ at $\eps = 0.05$.}\label{tab:dimension}
+\begin{tabular}{@{}rc@{}}
+\toprule
+$d$ & $\lambda_{\mathrm{gen}} - \lambda_{\mathrm{abel}}$ \\
+\midrule
+2  & 0.000864 \\
+4  & 0.001230 \\
+6  & 0.001238 \\
+8  & 0.001192 \\
+10 & 0.001124 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \textbf{Discrete proof spaces.}
+  Our results use continuous matrix groups.  Extending the framework
+  to finite proof state spaces (e.g., propositional proof systems)
+  with a purely discrete group structure would make it directly
+  applicable to formal verification systems such as Lean or Coq.
+
+\item \textbf{Optimal proof decomposition.}
+  Given a proof goal, what is the algorithmically optimal decomposition
+  into substeps that minimizes the commutator norm of the resulting
+  error operators?  This optimization problem connects our framework
+  to proof complexity theory.
+
+\item \textbf{Connection to proof complexity.}
+  Can the Lyapunov exponent or spectral gap of the error propagation
+  operator be formally related to proof length or proof width in the
+  sense of propositional proof complexity?
+
+\item \textbf{Empirical validation.}
+  Testing the predictions of Theorems~\ref{thm:lyapunov}
+  and~\ref{thm:spectral_gap} on actual proof search traces from
+  interactive theorem provers would bridge the gap between our
+  theoretical framework and practical proof engineering.
+\end{enumerate}

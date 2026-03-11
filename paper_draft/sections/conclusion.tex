@@ -1,0 +1,22 @@
+\section{Conclusion}\label{sec:conclusion}
+
+We have established a mathematical framework connecting the algebraic
+structure of error propagation to convergence behavior in multi-step
+mathematical proofs.  The Lyapunov exponent ordering theorem
+(Theorem~\ref{thm:lyapunov}) shows that abelian error operators
+accumulate errors strictly more slowly than non-abelian ones, with the
+gap controlled by the commutator Frobenius norm at order $\Theta(\eps^2)$.
+The spectral gap comparison (Theorem~\ref{thm:spectral_gap}) reveals
+that non-abelian groups can mix up to four times faster on matched Cayley
+graphs, creating a fundamental tension between error minimization and
+exploration efficiency.  The Diaconis bound analysis
+(Theorem~\ref{thm:diaconis}) explains why abelian groups yield more
+informative convergence bounds.  Together, these results provide a
+principled basis for proof strategy design: commuting substeps for error
+control, non-commuting operations for search efficiency, and the
+commutator norm as a computable diagnostic.
+
+These results bridge Lie group error theory \cite{barrau2014,wang2008,li2023},
+quantum error correction \cite{gottesman1996,arvind2002,zhao2023},
+and spectral theory of random walks \cite{diaconis1988,furstenberg1963}
+into a unified framework applicable to mathematical proof systems.

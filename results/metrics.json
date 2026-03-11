@@ -1,0 +1,177 @@
+{
+  "experiment_1_spectral_comparison": [
+    {
+      "name": "Z_6 (abelian, order 6)",
+      "order": 6,
+      "abelian": true,
+      "spectral_radius": 0.2,
+      "spectral_gap": 0.8,
+      "mixing_time_bound": 7.996162069020183,
+      "commutator_size": 1
+    },
+    {
+      "name": "D_3 (non-abelian, order 6)",
+      "order": 6,
+      "abelian": false,
+      "spectral_radius": 0.2,
+      "spectral_gap": 0.8,
+      "mixing_time_bound": 7.996162069020183,
+      "commutator_size": 3
+    },
+    {
+      "name": "Z_8 (abelian, order 8)",
+      "order": 8,
+      "abelian": true,
+      "spectral_radius": 0.14285714285714293,
+      "spectral_gap": 0.8571428571428571,
+      "mixing_time_bound": 7.798713682279248,
+      "commutator_size": 1
+    },
+    {
+      "name": "Q_8 (non-abelian, order 8)",
+      "order": 8,
+      "abelian": false,
+      "spectral_radius": 0.14285714285714293,
+      "spectral_gap": 0.8571428571428571,
+      "mixing_time_bound": 7.798713682279248,
+      "commutator_size": 2
+    },
+    {
+      "name": "D_4 (non-abelian, order 8)",
+      "order": 8,
+      "abelian": false,
+      "spectral_radius": 0.14285714285714293,
+      "spectral_gap": 0.8571428571428571,
+      "mixing_time_bound": 7.798713682279248,
+      "commutator_size": 2
+    },
+    {
+      "name": "Z_10 (abelian, order 10)",
+      "order": 10,
+      "abelian": true,
+      "spectral_radius": 0.11111111111111119,
+      "spectral_gap": 0.8888888888888888,
+      "mixing_time_bound": 7.771224688854904,
+      "commutator_size": 1
+    },
+    {
+      "name": "D_5 (non-abelian, order 10)",
+      "order": 10,
+      "abelian": false,
+      "spectral_radius": 0.11111111111111119,
+      "spectral_gap": 0.8888888888888888,
+      "mixing_time_bound": 7.771224688854904,
+      "commutator_size": 5
+    },
+    {
+      "name": "Z_24 (abelian, order 24)",
+      "order": 24,
+      "abelian": true,
+      "spectral_radius": 0.04347826086956526,
+      "spectral_gap": 0.9565217391304347,
+      "mixing_time_bound": 8.137006926169494,
+      "commutator_size": 1
+    },
+    {
+      "name": "S_4 (non-abelian, order 24)",
+      "order": 24,
+      "abelian": false,
+      "spectral_radius": 0.04347826086956526,
+      "spectral_gap": 0.9565217391304347,
+      "mixing_time_bound": 8.137006926169494,
+      "commutator_size": 12
+    }
+  ],
+  "experiment_2_convergence_simulation": {
+    "Z_6": {
+      "empirical_rate": 0.002435736372820241
+    },
+    "D_3": {
+      "empirical_rate": 0.0024741209801314385
+    },
+    "Z_8": {
+      "empirical_rate": 0.002471578200215397
+    },
+    "Q_8": {
+      "empirical_rate": 0.0024595946796452297
+    },
+    "Z_24": {
+      "empirical_rate": 0.0024585052836543376
+    },
+    "S_4": {
+      "empirical_rate": 0.002477572961852627
+    }
+  },
+  "experiment_3_commutator_prediction": [
+    {
+      "name": "Z_6",
+      "order": 6,
+      "abelian": true,
+      "spectral_radius": 0.2,
+      "commutator_ratio": 0.16666666666666666
+    },
+    {
+      "name": "D_3",
+      "order": 6,
+      "abelian": false,
+      "spectral_radius": 0.2,
+      "commutator_ratio": 0.5
+    },
+    {
+      "name": "Z_8",
+      "order": 8,
+      "abelian": true,
+      "spectral_radius": 0.14285714285714293,
+      "commutator_ratio": 0.125
+    },
+    {
+      "name": "D_4",
+      "order": 8,
+      "abelian": false,
+      "spectral_radius": 0.14285714285714293,
+      "commutator_ratio": 0.25
+    },
+    {
+      "name": "Z_10",
+      "order": 10,
+      "abelian": true,
+      "spectral_radius": 0.11111111111111119,
+      "commutator_ratio": 0.1
+    },
+    {
+      "name": "D_5",
+      "order": 10,
+      "abelian": false,
+      "spectral_radius": 0.11111111111111119,
+      "commutator_ratio": 0.5
+    },
+    {
+      "name": "Z_12",
+      "order": 12,
+      "abelian": true,
+      "spectral_radius": 0.09090909090909097,
+      "commutator_ratio": 0.08333333333333333
+    },
+    {
+      "name": "D_6",
+      "order": 12,
+      "abelian": false,
+      "spectral_radius": 0.09090909090909097,
+      "commutator_ratio": 0.25
+    },
+    {
+      "name": "Z_14",
+      "order": 14,
+      "abelian": true,
+      "spectral_radius": 0.07692307692307694,
+      "commutator_ratio": 0.07142857142857142
+    },
+    {
+      "name": "D_7",
+      "order": 14,
+      "abelian": false,
+      "spectral_radius": 0.07692307692307694,
+      "commutator_ratio": 0.5
+    }
+  ]
+}

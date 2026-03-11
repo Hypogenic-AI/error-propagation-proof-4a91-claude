@@ -1,0 +1,206 @@
+{
+  "experiment_1": [
+    {
+      "name": "Z_6",
+      "order": 6,
+      "abelian": true,
+      "n_gens": 2,
+      "rho": 0.9999999999999996,
+      "gap": 4.440892098500626e-16
+    },
+    {
+      "name": "D_3",
+      "order": 6,
+      "abelian": false,
+      "n_gens": 3,
+      "rho": 0.6666666666666672,
+      "gap": 0.3333333333333328
+    },
+    {
+      "name": "Z_8",
+      "order": 8,
+      "abelian": true,
+      "n_gens": 2,
+      "rho": 0.9999999999999992,
+      "gap": 7.771561172376096e-16
+    },
+    {
+      "name": "Q_8",
+      "order": 8,
+      "abelian": false,
+      "n_gens": 4,
+      "rho": 1.0,
+      "gap": 0.0
+    },
+    {
+      "name": "D_4",
+      "order": 8,
+      "abelian": false,
+      "n_gens": 3,
+      "rho": 1.0,
+      "gap": 0.0
+    },
+    {
+      "name": "Z_10",
+      "order": 10,
+      "abelian": true,
+      "n_gens": 2,
+      "rho": 1.0,
+      "gap": 0.0
+    },
+    {
+      "name": "D_5",
+      "order": 10,
+      "abelian": false,
+      "n_gens": 3,
+      "rho": 0.8726779962499647,
+      "gap": 0.12732200375003533
+    },
+    {
+      "name": "S_3",
+      "order": 6,
+      "abelian": false,
+      "n_gens": 2,
+      "rho": 0.9999999999999997,
+      "gap": 3.3306690738754696e-16
+    },
+    {
+      "name": "S_4",
+      "order": 24,
+      "abelian": false,
+      "n_gens": 3,
+      "rho": 1.0000000000000004,
+      "gap": -4.440892098500626e-16
+    },
+    {
+      "name": "Z2\u00d7Z3",
+      "order": 6,
+      "abelian": true,
+      "n_gens": 2,
+      "rho": 0.866025403784438,
+      "gap": 0.13397459621556196
+    }
+  ],
+  "experiment_2": [
+    {
+      "order": 6,
+      "abelian_name": "Z_6",
+      "nonabelian_name": "D_3",
+      "rho_abelian": 0.9999999999999996,
+      "rho_nonabelian": 0.707106781186547,
+      "gap_abelian": 4.440892098500626e-16,
+      "gap_nonabelian": 0.292893218813453,
+      "comm_ratio": 0.5,
+      "abelian_faster": "False"
+    },
+    {
+      "order": 8,
+      "abelian_name": "Z_8",
+      "nonabelian_name": "D_4",
+      "rho_abelian": 0.9999999999999992,
+      "rho_nonabelian": 1.0000000000000004,
+      "gap_abelian": 7.771561172376096e-16,
+      "gap_nonabelian": -4.440892098500626e-16,
+      "comm_ratio": 0.25,
+      "abelian_faster": "True"
+    },
+    {
+      "order": 10,
+      "abelian_name": "Z_10",
+      "nonabelian_name": "D_5",
+      "rho_abelian": 1.0,
+      "rho_nonabelian": 0.8090169943749472,
+      "gap_abelian": 0.0,
+      "gap_nonabelian": 0.19098300562505277,
+      "comm_ratio": 0.5,
+      "abelian_faster": "False"
+    },
+    {
+      "order": 12,
+      "abelian_name": "Z_12",
+      "nonabelian_name": "D_6",
+      "rho_abelian": 0.9999999999999991,
+      "rho_nonabelian": 1.0000000000000004,
+      "gap_abelian": 8.881784197001252e-16,
+      "gap_nonabelian": -4.440892098500626e-16,
+      "comm_ratio": 0.25,
+      "abelian_faster": "True"
+    },
+    {
+      "order": 14,
+      "abelian_name": "Z_14",
+      "nonabelian_name": "D_7",
+      "rho_abelian": 0.9999999999999991,
+      "rho_nonabelian": 0.9009688679024203,
+      "gap_abelian": 8.881784197001252e-16,
+      "gap_nonabelian": 0.09903113209757974,
+      "comm_ratio": 0.5,
+      "abelian_faster": "False"
+    },
+    {
+      "order": 16,
+      "abelian_name": "Z_16",
+      "nonabelian_name": "D_8",
+      "rho_abelian": 1.0000000000000004,
+      "rho_nonabelian": 1.0000000000000016,
+      "gap_abelian": -4.440892098500626e-16,
+      "gap_nonabelian": -1.5543122344752192e-15,
+      "comm_ratio": 0.25,
+      "abelian_faster": "True"
+    },
+    {
+      "order": 20,
+      "abelian_name": "Z_20",
+      "nonabelian_name": "D_10",
+      "rho_abelian": 0.9999999999999996,
+      "rho_nonabelian": 1.0000000000000002,
+      "gap_abelian": 4.440892098500626e-16,
+      "gap_nonabelian": -2.220446049250313e-16,
+      "comm_ratio": 0.25,
+      "abelian_faster": "True"
+    },
+    {
+      "order": 24,
+      "abelian_name": "Z_24",
+      "nonabelian_name": "D_12",
+      "rho_abelian": 0.9999999999999986,
+      "rho_nonabelian": 0.9999999999999997,
+      "gap_abelian": 1.4432899320127035e-15,
+      "gap_nonabelian": 3.3306690738754696e-16,
+      "comm_ratio": 0.25,
+      "abelian_faster": "True"
+    }
+  ],
+  "experiment_3": {
+    "order_6": {
+      "abelian_mean": 0.9477499074759308,
+      "abelian_std": 0.06534610072042639,
+      "nonabelian_mean": 0.8286574669941302,
+      "nonabelian_std": 0.14431494168959694
+    },
+    "order_8": {
+      "abelian_mean": 0.9509022984697798,
+      "abelian_std": 0.036424657823390556,
+      "nonabelian_mean": 1.0,
+      "nonabelian_std": 4.095052772769667e-16
+    },
+    "order_10": {
+      "abelian_mean": 0.9818909110292067,
+      "abelian_std": 0.02363012479018106,
+      "nonabelian_mean": 0.8911396867937199,
+      "nonabelian_std": 0.0945510550869241
+    },
+    "order_12": {
+      "abelian_mean": 0.9856888470414088,
+      "abelian_std": 0.016817598309822827,
+      "nonabelian_mean": 0.9999999999999999,
+      "nonabelian_std": 7.052319822856589e-16
+    }
+  },
+  "experiment_6_proof_simulation": {
+    "rate_abelian": 0.04012140492666584,
+    "rate_nonabelian": 0.041927830138629496,
+    "final_distance_abelian": 0.050967710090225264,
+    "final_distance_nonabelian": 0.09959804465969131
+  }
+}

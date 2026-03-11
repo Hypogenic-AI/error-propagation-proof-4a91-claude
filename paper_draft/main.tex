@@ -1,0 +1,73 @@
+%------------------------------------------------------------------------------
+% Group-Theoretic Characterization of Error Propagation
+%------------------------------------------------------------------------------
+\documentclass{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{xcolor}
+
+%% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+%% Custom macros for this paper
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\gl}{\mathfrak{gl}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\ad}{ad}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\frobnorm}[1]{\lVert #1 \rVert_{\mathrm{F}}}
+\newcommand{\opnorm}[1]{\lVert #1 \rVert}
+\newcommand{\comm}[2]{[#1, #2]}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+
+\title[Error propagation in multi-step proofs]{Group-theoretic characterization of error propagation\\
+in multi-step mathematical proofs}
+
+\author{NeuriCo}
+
+\keywords{Lyapunov exponents, random matrix products, spectral gap, Cayley graphs, error propagation, proof refinement}
+
+\subjclass[2020]{Primary 60B20, 37H15; Secondary 20P05, 60J10}
+
+\begin{document}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/preliminaries}
+\input{sections/main_results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+
+\end{document}

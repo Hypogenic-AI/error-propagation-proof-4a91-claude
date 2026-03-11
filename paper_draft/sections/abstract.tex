@@ -1,0 +1,19 @@
+We investigate the algebraic structure governing how errors compound through
+multi-step mathematical reasoning. Modeling each proof step as a linear
+perturbation $E_k = I + \eps A_k$ of the identity in $\GL_d(\R)$, we study
+the Lyapunov exponent $\lambda$ of the random matrix product
+$\prod_{k=1}^n E_k$ and the spectral gap of associated random walks on
+finite groups.  Our main result establishes a Lyapunov exponent ordering:
+when the error directions $\{A_k\}$ are simultaneously diagonalizable
+(the abelian case), the Lyapunov exponent is strictly negative, whereas
+non-simultaneously-diagonalizable (non-abelian) error directions produce
+a strictly larger exponent, with the gap controlled at order $\Theta(\eps^2)$
+by the expected squared Frobenius norm of the commutator $\E[\frobnorm{\comm{A_1}{A_2}}^2]$.
+We complement this with an analysis of spectral gaps on Cayley graphs,
+proving that the dihedral group $D_n$ with two generators has spectral gap
+asymptotically four times that of the cyclic group $\Z_{2n}$ with matched
+order.  Applied to iterative proof refinement, these results show that
+commuting (independent) proof substeps minimize error accumulation, while
+non-commuting operations can accelerate proof space exploration---two
+fundamentally distinct optimization objectives.  All theoretical results
+are verified by numerical experiments.

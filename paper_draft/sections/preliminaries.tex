@@ -1,0 +1,108 @@
+\section{Preliminaries}\label{sec:prelim}
+
+We establish notation and recall the background results used throughout
+the paper.
+
+\subsection{Notation}\label{ssec:notation}
+
+We write $I$ or $I_d$ for the $d \times d$ identity matrix,
+$\GL_d(\R)$ for the general linear group, and $\gl_d(\R)$ for its Lie
+algebra of all $d \times d$ real matrices.  For $A, B \in \gl_d(\R)$,
+the \emph{commutator} (Lie bracket) is $\comm{A}{B} = AB - BA$.  The
+Frobenius norm is $\frobnorm{A} = (\Tr(A^\top A))^{1/2}$, and the
+operator norm is $\opnorm{A} = \sup_{\opnorm{x}=1} \opnorm{Ax}$.  We
+write $\E[\cdot]$ for expectation and $\sigma^2$ for variance.  The
+notation $f = \Theta(g)$ means $c_1 \abs{g} \le \abs{f} \le c_2 \abs{g}$
+for positive constants $c_1, c_2$.
+
+For a finite group $G$ and a probability measure $\mu$ on $G$, the
+\emph{lazy random walk} driven by $\mu$ has transition operator
+$P = \tfrac{1}{2} I + \tfrac{1}{2} T_\mu$, where $(T_\mu f)(g)
+= \sum_{h} \mu(h) f(gh)$.
+
+\subsection{Proof state spaces and error operators}
+
+\begin{definition}\label{def:proof_state}
+A \emph{proof state space} is a pair $(S, d)$ where $S \subseteq \R^d$
+is a subset containing the origin and $d$ is the Euclidean metric.
+The \emph{correct proof state} is $s^* = 0$.
+\end{definition}
+
+\begin{definition}\label{def:error_op}
+An \emph{error operator} is a matrix $E = I + \eps A \in \GL_d(\R)$
+where $A \in \gl_d(\R)$ is the \emph{error direction} and $\eps > 0$
+is the \emph{error magnitude}.  Given a collection of error operators
+$\{E_k\}_{k \ge 1}$, the \emph{error group} is
+$G = \langle \{E_k\} \rangle \le \GL_d(\R)$.
+\end{definition}
+
+\begin{definition}\label{def:error_prop}
+An \emph{$n$-step error propagation} is the cumulative product
+\[
+  E^{(n)} = \prod_{k=1}^{n} E_k = E_n E_{n-1} \cdots E_1.
+\]
+The \emph{Lyapunov exponent} of the sequence is
+\[
+  \lambda = \lim_{n \to \infty} \frac{1}{n}\, \E\bigl[\log \opnorm{E^{(n)}}\bigr],
+\]
+provided the limit exists.
+\end{definition}
+
+\begin{definition}\label{def:abelian}
+The error propagation is \emph{abelian} if all error operators commute:
+$E_i E_j = E_j E_i$ for all $i, j$.  Equivalently, the error directions
+$\{A_k\}$ are \emph{simultaneously diagonalizable} over $\R$
+(or over $\mathbb{C}$ if we allow complex eigenvalues).
+\end{definition}
+
+\begin{definition}\label{def:spectral_gap}
+For a random walk on a finite group $G$ with transition operator $P$
+acting on $L^2(G)$, the \emph{spectral gap} is
+\[
+  \gamma = 1 - \rho\bigl(P\big|_{\mathbf{1}^\perp}\bigr),
+\]
+where $\rho(\cdot)$ denotes the spectral radius and $\mathbf{1}^\perp$
+is the orthogonal complement of the constant functions.
+\end{definition}
+
+\subsection{Background results}
+
+We collect several known results that are used in our proofs.
+
+\begin{theorem}[Barrau--Bonnabel {\cite[Theorem~2]{barrau2014}}]
+\label{thm:bb}
+Let $\chi_t$ be a trajectory on a matrix Lie group $G$ satisfying
+$\dot{\chi}_t = f_{u_t}(\chi_t)$.  If the dynamics satisfy the group
+affine property
+\[
+  f_u(ab) = f_u(a)\,b + a\,f_u(b) - a\,f_u(\mathrm{Id})\,b
+  \quad \text{for all } u, a, b \in G,
+\]
+then the Lie logarithm $\xi_t = \log(\eta_t)$ of the invariant error
+$\eta_t$ satisfies the linear ODE $\dot{\xi}_t = A_t \xi_t$, with
+$\eta_t = \exp(\xi_t)$ holding for arbitrarily large errors.
+\end{theorem}
+
+\begin{theorem}[Furstenberg {\cite{furstenberg1963}}]\label{thm:furstenberg}
+Let $\{M_k\}_{k \ge 1}$ be i.i.d.\ random matrices in $\GL_d(\R)$
+with $\E[\log^+ \opnorm{M_1}] < \infty$.  If the closed group generated
+by the support of the distribution of $M_1$ is non-compact and acts
+strongly irreducibly on $\R^d$, then the top Lyapunov exponent
+$\lambda_1 = \lim_{n \to \infty} \frac{1}{n} \E[\log\opnorm{M_n \cdots M_1}]$
+is strictly positive.
+\end{theorem}
+
+\begin{theorem}[Diaconis upper bound lemma {\cite[Lemma~2]{diaconis1988}}]
+\label{thm:diaconis_lemma}
+Let $\mu^{*k}$ denote the $k$-fold convolution of a probability measure
+$\mu$ on a finite group $G$ and let $U$ be the uniform distribution.
+Then
+\[
+  \bigl\lVert \mu^{*k} - U \bigr\rVert_{\mathrm{TV}}^2
+  \le \frac{1}{4} \sum_{\rho \ne \mathbf{1}} d_\rho \,
+  \Tr\bigl(\hat{\mu}(\rho)^k \hat{\mu}(\rho)^{*k}\bigr),
+\]
+where the sum is over non-trivial irreducible representations $\rho$
+of $G$ with dimension $d_\rho$, and $\hat{\mu}(\rho)$ is the Fourier
+transform of $\mu$ at $\rho$.
+\end{theorem}

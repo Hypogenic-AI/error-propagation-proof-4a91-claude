@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-03-10T22:58:57.976595",
+  "stages": {
+    "resource_finder": {
+      "status": "completed",
+      "started_at": "2026-03-10T22:58:57.976952",
+      "completed_at": "2026-03-10T23:36:07.406939",
+      "success": true,
+      "outputs": {
+        "literature_review": "/workspaces/error-propagation-proof-4a91-claude/literature_review.md",
+        "resources_catalog": "/workspaces/error-propagation-proof-4a91-claude/resources.md",
+        "papers_dir": "/workspaces/error-propagation-proof-4a91-claude/papers",
+        "code_dir": "/workspaces/error-propagation-proof-4a91-claude/code"
+      }
+    },
+    "experiment_runner": {
+      "status": "completed",
+      "started_at": "2026-03-10T23:36:07.407324",
+      "completed_at": "2026-03-10T23:56:26.326265",
+      "success": true,
+      "outputs": {
+        "success": true,
+        "return_code": 0,
+        "elapsed_time": 1218.901141166687,
+        "log_file": "/workspaces/error-propagation-proof-4a91-claude/logs/execution_claude.log",
+        "transcript_file": "/workspaces/error-propagation-proof-4a91-claude/logs/execution_claude_transcript.jsonl"
+      }
+    }
+  },
+  "current_stage": null,
+  "completed": true,
+  "completed_at": "2026-03-10T23:56:26.326729"
+}
